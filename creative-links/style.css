@@ -1,0 +1,139 @@
+body {
+  background-color: rgb(23, 8, 90);
+  font-family: cursive;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.link-container {
+  display: block;
+  background-color: rgb(147, 226, 183);
+  margin-bottom: 17px;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px 10px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #580732;
+  color: white;
+  padding: 14px 32px;
+  position: relative;
+}
+
+.link1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.link1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, blue, red);
+  /* background-color: rgb(136, 9, 136); */
+  /* transform: translateY(5px); */
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+.link1:hover::after {
+  transform: scaleX(1);
+  /* transform: translateY(0); */
+}
+
+.link2 {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.link2 span {
+  position: relative;
+  z-index: 2;
+}
+
+.link2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2%;
+  height: 100%;
+  background-color: #5373a9;
+  transform: scaleY(0);
+  transition: width 0.3s 0.3s, transform 0.3s;
+}
+
+.link2:hover::after {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+/* ENd Link 2 */
+
+/* Start LInk 3 */
+
+.link3 {
+  overflow: hidden;
+}
+
+.link3 #first {
+  display: inline-block;
+  transition: all 0.5s;
+  transform: translateY(0px);
+}
+
+.link3:hover #first {
+  transform: translateY(-50px);
+}
+
+.link3 #second {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  transition: all 0.5s;
+  padding: 14px 32px;
+  transform: translateY(50px);
+}
+
+.link3:hover #second {
+  transform: translateY(0px);
+}
+
+.link1 {
+  padding: 4px 0;
+  background: transparent;
+  color: red;
+}
+
+/* Link 4 */
+
+.link4 .special::after {
+  content: '';
+  width: 100%;
+  height: 9%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  /* transition: transform 1s ease-in-out; */
+  transition: transform 1s;
+  transform-origin: left;
+}
+
+.link4:hover .special::after {
+  /* transform: scaleX(1); */
+  transform: none;
+  transform-origin: right;
+}

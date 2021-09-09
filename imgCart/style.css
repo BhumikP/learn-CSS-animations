@@ -1,0 +1,58 @@
+body {
+  background: url('./img/bg.jpg') repeat;
+}
+
+.polo-gallery {
+  text-align: center;
+}
+
+.gallery-title {
+  color: #333;
+  font-size: 32px;
+  font-family: cursive;
+  font-weight: 400;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+}
+.poloroid-cart {
+  display: inline-block;
+  background-color: #eee6d8;
+  padding: 10px;
+}
+
+.card-caption {
+  font-family: cursive;
+  font-size: 12px;
+  margin-top: 6px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.poloroid-cart:nth-of-type(odd) {
+  transform: rotate(-12deg);
+}
+
+.poloroid-cart:nth-of-type(odd)::before {
+  content: '';
+  display: block;
+  background-color: #e5f5f5b8;
+  width: 100px;
+  height: 25px;
+  transform: rotate(33deg) translate(35px, -31px);
+  margin-left: auto;
+}
+.poloroid-cart:nth-of-type(even)::before {
+  content: '';
+  display: block;
+  background-color: #e5f5f5b8;
+  width: 100px;
+  height: 25px;
+  transform: rotate(-33deg) translate(-33px, -30px);
+}
+
+.poloroid-cart:nth-of-type(even) {
+  transform: rotate(12deg);
+}

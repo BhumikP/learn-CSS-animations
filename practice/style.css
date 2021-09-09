@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.outer {
+  border: 4px dashed lightsteelblue;
+  width: 300px;
+  display: block;
+  height: 300px;
+}
+.inner {
+  border: 4px solid red;
+  height: 292px;
+  transition: all 1s;
+  transform: rotate(20deg) translate(20px, 20px) scale(1.5);
+}
+
+/* transform-origin: top right; */
