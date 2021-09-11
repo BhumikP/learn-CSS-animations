@@ -42,8 +42,7 @@ ul li a {
   height: 30px;
   top: 0;
   left: 0;
-  cursor: default;
-  /* transition: 0.1s; */
+  transition: all 0.15s linear;
   background: white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
